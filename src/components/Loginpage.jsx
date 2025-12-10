@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
+
 
 const Loginpage = () => {
   return (
     <div className="min-h-screen flex justify-center items-center ">
 
   
-      <div className="max-w-xl w-full bg-black/20 border border-gray-700 p-8 rounded-3xl shadow-lg">
+      <div className="max-w-xl w-full bg-[#0f0f0f] border border-gray-700 p-8 rounded-3xl shadow-lg">
 
     
         <button className="w-full py-3 bg-white rounded-2xl text-black font-medium flex justify-center items-center gap-2">
@@ -22,7 +25,7 @@ const Loginpage = () => {
 
         
         <label className="text-gray-300 text-sm">Email Address</label>
-        <input 
+        <input  required
           type="email"
           placeholder="Enter your email address"
           className="w-full bg-black/20 mt-2 p-3 border border-gray-600 rounded-xl text-white mb-6"
@@ -30,16 +33,19 @@ const Loginpage = () => {
 
 
         <label className="text-gray-300 text-sm">Password</label>
-        <input 
+        <input  required
           type="password"
           placeholder="Enter your password"
           className="w-full bg-black/20 mt-2 p-3 border border-gray-600 rounded-xl text-white mb-6"
         />
 
       
-        <button className="w-full py-3 bg-white text-black font-medium rounded-2xl">
-          Sign In
-        </button>
+        <Link to="/home" className="w-full block">
+  <button className="w-full py-3  active:scale-95   bg-white text-black font-medium rounded-2xl">
+    Sign In
+  </button>
+</Link>
+
 
         
         <p className="text-center text-gray-400 mt-4">
