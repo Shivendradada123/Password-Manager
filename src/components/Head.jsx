@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Head = () => {
-  return (
-    <div className='flex justify-center'>
-      <div className='flex flex-col items-center text-center m-6 py-1'>
+  return ( 
+    <div className='flex justify-center   bg-gradient-to-b from-black to-gray-900'>
+      <div className='flex flex-col   items-center text-center m-6 py-1'>
 
         <button className='px-4 rounded-xl font-bold w-16 h-10 bg-white'>
           PM
