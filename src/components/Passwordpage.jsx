@@ -41,7 +41,7 @@ const Passwordpage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center py-10 min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
+    <div className="flex flex-col items-center py-10 min-h-screen  text-white">
       <div className="w-full max-w-[700px] bg-black/30 p-10 rounded-xl border border-gray-700">
 
         <form onSubmit={handlesave} className="flex flex-col gap-5">
