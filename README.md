@@ -9,3 +9,21 @@
           <span className="text-gray-400">or</span>
           <hr className="flex-1 border-gray-600" />
           ```
+
+
+
+
+          # useNavigate
+
+        ``` jsx
+        Step 1: Import
+    import { useNavigate } from "react-router-dom";
+```
+    ```
+    Step 2: Navigate function बनाओ
+    const navigate = useNavigate();
+    ```
+    ```
+    Step 3: जहां जाना है वहाँ navigate("path") लिख दो
+    navigate("/login");
+    ```
