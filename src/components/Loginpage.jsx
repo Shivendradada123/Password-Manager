@@ -6,12 +6,12 @@ const Loginpage = () => {
     <div className="min-h-screen flex justify-center items-center ">
       <div className="max-w-xl w-full bg-[#0f0f0f] border border-gray-700 p-8 rounded-3xl shadow-lg">
         <button className="w-full py-3 bg-white rounded-2xl text-black font-medium flex justify-center items-center gap-2">
-          Continue with Google
+          Continue with Basics Details
         </button>
 
         <div className="flex items-center gap-4 my-6">
           <hr className="flex-1 border-gray-600" />
-          <span className="text-gray-400">or</span>
+          <span className="text-gray-400">Welcome</span>
           <hr className="flex-1 border-gray-600" />
         </div>
 
