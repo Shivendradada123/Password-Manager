@@ -83,12 +83,12 @@ const Signuppage = () => {
           <hr className="flex-1 border-gray-600" />
         </div>
 
-        <label className="text-gray-300 text-sm">Email Address / Phone number</label>
+        <label className="text-gray-300 text-sm">Email Address</label>
         <input
           required
           type="email"
           onChange={(e)=> setemail(e.target.value)}
-          placeholder=" Eg - 6261647208"
+          placeholder=" Eg - Shivnedrapulser09@gmail.com"
           className="w-full bg-black/20 mt-2 p-3 border border-gray-600 rounded-xl text-white mb-6"
         />
 
