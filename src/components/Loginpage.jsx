@@ -1,7 +1,58 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useNavigate } from "react-router-dom";
 
 const Loginpage = () => {
+
+    const [email, setemail] = useState("");
+    const [password, setpassword] = useState("");
+
+
+    const useNavigate = useNavigate();
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className="min-h-screen flex justify-center items-center ">
       <div className="max-w-xl w-full bg-[#0f0f0f] border border-gray-700 p-8 rounded-3xl shadow-lg">
