@@ -59,7 +59,7 @@ const Passwordpage = ({ search }) => {
     setpassword(item.password);
     setEditIndex(index);
   };
-//
+//s//
   const copyPassword = (pass) => {
     navigator.clipboard.writeText(pass);
     setToast("Password copied successfully!");
