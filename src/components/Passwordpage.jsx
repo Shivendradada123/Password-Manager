@@ -8,6 +8,12 @@ const Passwordpage = () => {
   const [SavedData, setSavedData] = useState([]);
   const [showPass, setShowPass] = useState(false);
 
+const [editIndex, seteditIndex] = useState("")
+const [tost, setTost] = useState("");
+
+
+
+  
   useEffect(() => {
     const getData = JSON.parse(localStorage.getItem("Password")) || [];
     setSavedData(getData);
@@ -25,13 +31,7 @@ const Passwordpage = () => {
 
   const handlesave = (e) => {
     e.preventDefault();
-    const newEntry = { Platform, Username, password };
-    const updated = [...SavedData, newEntry];
-    setSavedData(updated);
-    localStorage.setItem("Password", JSON.stringify(updated));
-    setPlatform("");
-    setpassword("");
-    setUsername("");
+    
   };
 
   const deleteItem = (index) => {
