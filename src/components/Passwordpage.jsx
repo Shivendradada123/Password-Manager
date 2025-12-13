@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-const Passwordpage = () => {
+const Passwordpage = ({ search }) => {
   const [password, setpassword] = useState("");
   const [Platform, setPlatform] = useState("");
   const [Username, setUsername] = useState("");
@@ -66,9 +66,17 @@ const Passwordpage = () => {
     setTimeout(() => setToast(""), 2000);
   };
 
+ const filteredData = search
+  ? SavedData.filter(
+      (item) =>
+        item.Platform.toLowerCase().includes(search.toLowerCase()) ||
+        item.Username.toLowerCase().includes(search.toLowerCase())
+    )
+  : SavedData;
+
+
   return (
     <div className="flex flex-col items-center py-10 min-h-screen text-white">
-
       {toast && (
         <div className="fixed bottom-5 right-5 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg">
           {toast}
@@ -132,7 +140,7 @@ const Passwordpage = () => {
       <div className="w-full max-w-[750px] mt-10 bg-white/5 p-8 rounded-xl border border-gray-700">
         <h2 className="text-2xl font-bold mb-6">Saved Passwords</h2>
 
-        {SavedData.map((item, index) => (
+        {filteredData.map((item, index) => (
           <div
             key={index}
             className="bg-black/30 p-5 rounded-lg border border-gray-600 mb-4 flex justify-between items-center"
@@ -150,14 +158,12 @@ const Passwordpage = () => {
               >
                 Copy
               </button>
-
               <button
                 onClick={() => editItem(index)}
                 className="bg-yellow-500 text-black px-3 h-10 rounded-md text-sm"
               >
                 Edit
               </button>
-
               <button
                 onClick={() => deleteItem(index)}
                 className="bg-red-600 px-3 h-10 rounded-md text-sm"

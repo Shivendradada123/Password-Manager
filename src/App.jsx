@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Loginpage from "./components/Loginpage";
 import Head from "./components/Head";
@@ -8,10 +8,16 @@ import Passwordpage from "./components/Passwordpage";
 import Signup from "./components/Signup";
 
 const App = () => {
+
+
+const [search, setSearch] = useState("")
+
+
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900">
         <BrowserRouter>
-          <Navbar/>
+          <Navbar search = {search} setSearch={setSearch} />
               <Head/>
         
 
@@ -22,7 +28,7 @@ const App = () => {
 
       <Route   path="/"  element={<Loginpage/>}  />
       <Route   path="/home"  element={<Home/>}  />
-      <Route   path="/Pass"  element={<Passwordpage/>}  />
+      <Route   path="/Pass"  element={<Passwordpage    search={search}/>}   />
 
       <Route     path="/signup" element={<Signup/>}    />
           </Routes>
